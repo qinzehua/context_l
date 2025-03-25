@@ -30,7 +30,7 @@ export interface SelectorContext<ContextProps>{
   defaultValue: ContextProps;
 }
 
-export function createContext<ContextProps>(defaultValue: ContextProps): SelectorContext<ContextProps>{
+export function createContext<ContextProps>(defaultValue?: ContextProps): SelectorContext<ContextProps>{
    const Context = React.createContext<Context<ContextProps>>(undefined);
    
    const Provider = ({children, value}: ContextSelectorProviderProps<ContextProps>) => {
